@@ -28,7 +28,7 @@ jobs:
       - name: "Writer file 2"
         run: |
           mkdir -p ${{ github.workspace }}/test2
-          echo ${{ github.event.inputs.value1 }} > "${{ github.workspace }}/test2/file2.txt"
+          echo ${{ github.event.inputs.value2 }} > "${{ github.workspace }}/test2/file2.txt"
           pwd
           ls -la ${{ github.workspace }}/test2
           cat ${{ github.workspace }}/test2/file2.txt
