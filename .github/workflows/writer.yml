@@ -34,13 +34,13 @@ jobs:
           cat ${{ github.workspace }}/test2/file2.txt
 
       - name: "Cache file 1"
-        uses: actions/cache@v4
+        uses: actions/cache/save@v4
         with:
           path: ${{ github.workspace }}/test1
           key: my-cache-key-1-${{ github.run_number }}
 
       - name: "Cache file 2"
-        uses: actions/cache@v4
+        uses: actions/cache/save@v4
         with:
           path: ${{ github.workspace }}/test2
           key: my-cache-key-2-${{ github.run_number }}
